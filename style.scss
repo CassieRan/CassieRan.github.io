@@ -19,9 +19,10 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased !important;
   font-family: $base-font;
   color: $base-color;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .container {
@@ -353,9 +354,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -373,8 +372,7 @@ img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  margin-top: 23px;
   font-size: 18px;
 
   @include mobile {
@@ -442,6 +440,10 @@ nav {
         border-radius: 3px;
       }
     }
+  }
+
+  .entry {
+    font-size: 16px;
   }
 
   .comments {

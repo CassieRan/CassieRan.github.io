@@ -273,6 +273,7 @@ img {
   color: $selection-color;
   background: $selection-background-color;
 }
+
 ::selection {
   color: $selection-color;
   background: $selection-background-color;
@@ -282,12 +283,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 // Alignment
@@ -384,32 +385,54 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
     text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
     }
   }
 }
 
 // Posts
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $divider-color;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+.posts {
+  column-count: 2;
+  column-gap: 0;
+  counter-reset: item-counter;
+  @include mobile {
+    column-count: 1;
+  }
+  .post-container {
+    overflow: hidden;
+    break-inside: avoid;
+    counter-increment: item-counter;
+    padding: 10px;
+    @include mobile {
+      width: 100%;
+    }
+    .post {
+      padding: 25px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+      transition: all 0.7s ease-in-out;
+      &:hover {
+        box-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+        transform: translateY(-2px);
+      }
+    }
+  }
 }
 
 .post {
-  h1 {
-    margin-bottom: .1em;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+  padding: 25px;
+  @include mobile {
+    box-shadow: none;
+    padding: 0;
+  }
+  h2 {
+    margin: 0;
+    a {
+      color: #555;
+    }
   }
 
   .date {
@@ -444,6 +467,7 @@ nav {
 
   .entry {
     font-size: 16px;
+    font-family: "Source Sans Pro", "Montserrat", "Roboto", Helvetica, Arial, sans-serif;
   }
 
   .comments {
@@ -564,6 +588,7 @@ footer {
 
   .svg-icon {
     display: block;
+    opacity: .5;
     font-size: 0;
     list-style: none;
     margin: 0;

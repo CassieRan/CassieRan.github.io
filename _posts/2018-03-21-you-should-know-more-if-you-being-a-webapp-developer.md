@@ -346,9 +346,9 @@ styleEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
 
 参考：
 
-[在移动浏览器中使用viewport元标签控制布局](https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag)
+「1」[在移动浏览器中使用viewport元标签控制布局](https://developer.mozilla.org/zh-CN/docs/Mobile/Viewport_meta_tag)
 
-[A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html)
+「2」[A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html)
 
-[移动端高清、多屏适配方案](https://div.io/topic/1092)
+「3」[移动端高清、多屏适配方案](https://div.io/topic/1092)
 

@@ -234,9 +234,9 @@ maximum-scale、minimum-scale及user-scalable属性控制允许用户以怎样�
 
 设计稿元素尺寸/设计稿宽度=元素CSS像素/视口宽度
 
-上面已知 visual viewport宽度=ideal viewport宽度/当前缩放值=deal viewport宽度×dpr，
+上面已知 visual viewport宽度=ideal viewport宽度/当前缩放值=ideal viewport宽度×dpr，
 
-综合得到 **元素CSS像素=设计稿元素尺寸/设计稿宽度×viewport宽度×dpr**，
+综合得到 **元素CSS像素=设计稿元素尺寸/设计稿宽度×ideal viewport宽度×dpr**，
 
 我们令 rem=ideal viewport宽度×dpr，
 

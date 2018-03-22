@@ -262,6 +262,12 @@ img {
   margin: 0 0 1em;
   border: 1px solid rgba(0,0,0,0.16);
 }
+.site-avatar {
+  img {
+    max-width: 100%;
+    border: none;
+  }
+}
 
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {

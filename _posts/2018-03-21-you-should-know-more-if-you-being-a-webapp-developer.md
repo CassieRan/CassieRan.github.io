@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 做移动开发你应该了解得再多一些
+title: Web移动端适配你应该了解得再多一些
 tags: [移动端, 适配]
 comments: true
 ---

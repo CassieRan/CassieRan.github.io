@@ -260,13 +260,7 @@ img {
   display: block;
   max-width: 60%;
   margin: 0 0 1em;
-  border: 1px solid rgba(0,0,0,0.16);
-}
-.site-avatar {
-  img {
-    max-width: 100%;
-    border: none;
-  }
+  border: 1px solid rgba(0, 0, 0, 0.16);
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -345,6 +339,8 @@ img {
 
   img {
     border-radius: 5px;
+    max-width: 100%;
+    border: none;
   }
 }
 

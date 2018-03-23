@@ -267,7 +267,7 @@ docEl.firstElementChild.appendChild( styleEl );
 styleEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
 ```
 
-这种方式，可以精确地算出不同屏幕所应有的rem基准值，缺点就是要加载这么一段js代码，并且编写CSS代码时要经过较复杂的换算（**{property name}: {设计稿元素尺寸／设计稿宽度 * 10}rem**）。
+这种方式，可以精确地算出不同屏幕所应有的rem基准值，缺点就是要加载这么一段js代码，并且编写CSS代码时要经过较复杂的换算（**{property name}: {设计稿元素尺寸/设计稿宽度×10}rem**）。
 
 
 
@@ -281,7 +281,7 @@ styleEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
 
 **设计稿字体大小/设计稿倍数×dpr**
 
-举例说明如果设计稿基于iPhone 6设计的尺寸为750×1334的二倍图，某字体标记28px，则字体设置应该为28／2 × 2 = 28px。
+举例说明如果设计稿基于iPhone 6设计的尺寸为750×1334的二倍图，某字体标记28px，则字体设置应该为28 / 2 × 2 = 28px。
 
 （2）媒体查询时应该查询device-width而不是width，原因是页面经缩放width会大于或小于屏幕宽度。
 

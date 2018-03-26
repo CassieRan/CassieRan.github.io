@@ -49,6 +49,7 @@ footer-links:
   tumblr: # https://<username>.tumblr.com
   twitter:
   youtube: # channel/<your_long_string> or user/<user-name>
+  sina: 2877629294
 
 # Text under the icons in footer
 footer-text: © 2018

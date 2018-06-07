@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [译]PWA初探之service-worker生命周期
+title: PWA初探之service-worker生命周期
 tags: [PWA, service worker]
 comments: true
 ---

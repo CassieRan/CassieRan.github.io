@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PWA初探之注册service-worker
+title: PWA初探之注册Service Worker
 tags: [PWA, service worker]
 comments: true
 ---

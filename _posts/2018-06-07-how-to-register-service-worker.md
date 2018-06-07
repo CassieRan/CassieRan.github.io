@@ -6,9 +6,10 @@ comments: true
 ---
 
 
-### PWA初探之注册service-worker
 
-##### Code
+
+
+#### Code
 
 想要安装 service-worker ，需要先在浏览器中进行注册。
 
@@ -59,7 +60,7 @@ ServiceWorkerRegistration: {
 
 
 
-##### Issues
+#### Issues
 
 **issue1**: ServiceWorker registration failed:  DOMException: Only secure origins are allowed.
 
@@ -85,10 +86,4 @@ ServiceWorkerRegistration: {
 
 附：Service worker生命周期
 
-![Service Worker States](https://bitsofco.de/content/images/2016/07/Lifecycle-3.png)
-
-
-
-
-
-1. ​
+![Service Worker States](https://bitsofco.de/content/images/2016/07/Lifecycle-3.png)​

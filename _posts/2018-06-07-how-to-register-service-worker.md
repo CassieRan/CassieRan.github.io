@@ -1,6 +1,6 @@
 ---
-layout: PWA初探之注册service-worker
-title: 我是如何制作该网站的
+layout: post
+title: PWA初探之注册service-worker
 tags: [PWA, service worker]
 comments: true
 ---

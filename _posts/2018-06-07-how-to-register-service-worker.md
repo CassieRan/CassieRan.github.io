@@ -1,14 +1,9 @@
-
-
-```yaml
 ---
 layout: PWA初探之注册service-worker
 title: 我是如何制作该网站的
 tags: [PWA, service worker]
 comments: true
 ---
-```
-
 
 
 ### PWA初探之注册service-worker

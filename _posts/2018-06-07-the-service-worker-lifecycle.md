@@ -6,7 +6,6 @@ comments: true
 ---
 
 
-
 Service Worker 的生命周期可以分为6个阶段：解析(parsed)、安装(installing)、安装完成(installed)、激活(activating)、激活完成(activated)、闲置(redundant)
 
 ![Service Worker States](https://bitsofco.de/content/images/2016/07/Lifecycle-3.png)

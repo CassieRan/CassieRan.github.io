@@ -6,9 +6,6 @@ comments: true
 ---
 
 
-
-
-
 #### Code
 
 想要安装 service-worker ，需要先在浏览器中进行注册。
@@ -81,9 +78,3 @@ ServiceWorkerRegistration: {
 **Issue3**: Service Worker termination by a timeout timer was canceled because DevTools is attached.
 
 这个打印日志是为了让开发者知道，通常在此时服务工作线程应该被杀死了，但是由于 DevTools 的开启从而阻止了这项工作。
-
-
-
-附：Service worker生命周期
-
-![Service Worker States](https://bitsofco.de/content/images/2016/07/Lifecycle-3.png)​

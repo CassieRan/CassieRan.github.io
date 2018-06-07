@@ -75,7 +75,7 @@ self.addEventListener('install', function(event) {
 
 
 
-#### Installed / Waiting
+#### **Installed / Waiting**
 
 如果安装成功，Service Worker 的状态变为 installed （也叫 waiting ）。处于这个状态时， Service Worker 是有效的但是是未激活的 worker，还不能控制页面，而是等待从当前 worker 获得控制权，您可以在 registration 对象的 waiting 属性中检测到此状态。 
 
@@ -92,7 +92,7 @@ navigator.serviceWorker.register('./sw.js').then(function(registration) {
 
 
 
-#### Activating
+#### **Activating**
 
 在以下情况之一时，处于 Waiting 状态的 worker 的 activating 状态会被触发：
 
@@ -127,7 +127,7 @@ self.addEventListener('activate', function(event) {
 
 
 
-#### Activated
+#### **Activated**
 
 如果激活成功，Service Worker 状态会变成 active ，在这个状态下，Service Worker 是一个可以完全控制网页的激活 worker，您可以在 registration 对象的 active 属性中检测到此状态。 
 
@@ -155,7 +155,7 @@ self.addEventListener('message', function(event) {
 
 
 
-#### Redundant
+#### **Redundant**
 
 以下任一情况，Service Worker 都会变成 redundant：
 

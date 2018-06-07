@@ -70,7 +70,7 @@ ServiceWorkerRegistration: {
 
 **issue2**: ServiceWorker registration failed:  DOMException: Failed to register a ServiceWorker: The script has an unsupported MIME type ('text/html').
 
-下面是 Google's Web Developer Relations team 的工程师 **jeffposnick **对该问题的解答
+下面是 Google's Web Developer Relations team 的工程师 **jeffposnick** 对该问题的解答
 
 > In a development environment, you traditionally won't want a service worker installed (since local caching can mess up your ability to iterate on code changes), so there isn't one generated. The local dev HTTP server responds to the request for `/servrice-worker.js` generated from the service worker registration with a HTML error document, leading to that message being logged in the console. This error can be safely ignored.
 >

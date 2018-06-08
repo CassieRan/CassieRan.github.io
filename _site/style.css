@@ -56,17 +56,114 @@ table {
   box-sizing: border-box;
 }
 
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lujVj9_mf.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lujVj9_mf.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lujVj9_mf.woff2) format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lujVj9_mf.woff2) format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lujVj9_mf.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 /**************/
 /* BASE RULES */
 /**************/
 html {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 body {
-  font-family: "Spoqa Han Sans", "Source Sans Pro", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", "Verdana", "Arial", "Dotum", sans-serif;
-  color: #343a40;
-  line-height: 1.6;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: "Montserrat", "Source Sans Pro", "Roboto", Helvetica, Arial, sans-serif;
+  color: #555;
+  line-height: 1.5;
 }
 
 .container {
@@ -108,25 +205,25 @@ h3 {
 
 h4 {
   font-size: 20px;
-  color: #868e96;
+  color: #666;
 }
 
 h6 {
-  color: #868e96;
+  color: #666;
 }
 
 p {
-  color: #343a40;
+  color: #555;
   margin: 15px 0;
 }
 
 a {
-  color: #1b6ec2;
+  color: #c2255c;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, a:active {
-  color: #1b6ec2;
+  color: #c2255c;
 }
 
 em, i {
@@ -248,7 +345,7 @@ blockquote {
   border-left: 0.2em solid #dee2e6;
 }
 blockquote p {
-  color: #868e96;
+  color: #666;
 }
 blockquote p:last-child {
   margin-bottom: 0;
@@ -278,7 +375,11 @@ img {
   display: block;
   max-width: 100%;
   margin: 0 0 1em;
-  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+img.cover {
+  margin: 15px 0;
+  border: none;
 }
 
 .gmnoprint img {
@@ -326,7 +427,6 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
 }
 @media screen and (max-width: 640px) {
   .masthead {
@@ -349,6 +449,8 @@ img {
 }
 .site-avatar img {
   border-radius: 5px;
+  max-width: 100%;
+  border: none;
 }
 
 .site-info {
@@ -364,9 +466,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: #333;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -386,7 +486,6 @@ img {
 nav {
   float: right;
   margin-top: 23px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
 @media screen and (max-width: 640px) {
@@ -399,35 +498,66 @@ nav {
 }
 nav a {
   margin-left: 20px;
-  color: #333;
   text-align: right;
-  font-weight: 300;
-  letter-spacing: 1px;
 }
 @media screen and (max-width: 640px) {
   nav a {
     margin: 0 10px;
-    color: #4183C4;
   }
 }
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid #f1f3f5;
+.posts {
+  column-count: 2;
+  column-gap: 0;
+  counter-reset: item-counter;
+}
+@media screen and (max-width: 640px) {
+  .posts {
+    column-count: 1;
+  }
+}
+.posts .post-container {
+  overflow: hidden;
+  break-inside: avoid;
+  counter-increment: item-counter;
+  padding: 10px;
+}
+@media screen and (max-width: 640px) {
+  .posts .post-container {
+    width: 100%;
+  }
+}
+.posts .post-container .post {
+  padding: 25px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.7s ease-in-out;
+  border-radius: 2px;
+}
+.posts .post-container .post:hover {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+.post {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 25px;
 }
-
-.post h1 {
-  margin-bottom: .1em;
+@media screen and (max-width: 640px) {
+  .post {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+.post h2 {
+  margin: 0;
+}
+.post h2 a {
+  color: #555;
 }
 .post .date {
   font-weight: 300;
   font-size: 14px;
-  color: #868e96;
+  color: #666;
   margin-right: 3px;
 }
 .post .tag {
@@ -445,9 +575,14 @@ nav a {
 .post .tag li > a {
   margin: 3px 3px 3px 0;
   padding: .5px 4px;
-  color: #343a40;
+  color: #555;
   background-color: #e9ecef;
   border-radius: 3px;
+}
+.post .entry {
+  margin: 15px 0;
+  font-size: 16px;
+  font-family: "Source Sans Pro", "Montserrat", "Roboto", Helvetica, Arial, sans-serif;
 }
 .post .comments {
   margin-top: 10px;
@@ -490,10 +625,10 @@ nav a {
 }
 
 .archive a {
-  color: #343a40;
+  color: #555;
 }
 .archive time {
-  color: #868e96;
+  color: #666;
   font-size: 14px;
   font-weight: 300;
   margin-left: 3px;
@@ -511,7 +646,7 @@ nav a {
 .tags > .label > li > a {
   display: inline-block;
   margin: 1px;
-  color: #343a40;
+  color: #555;
   background-color: #e9ecef;
   border-radius: 3px;
 }
@@ -520,15 +655,15 @@ nav a {
   padding: .5px 5px;
 }
 .tags > .label > li > a span.count {
-  background-color: #dee2e6;
+  background-color: rgba(248, 195, 205, 0.5);
   border-radius: 0 3px 3px 0;
 }
 
 .tags > .tag a {
-  color: #343a40;
+  color: #555;
 }
 .tags > .tag time {
-  color: #868e96;
+  color: #666;
   font-size: 14px;
   font-weight: 300;
   margin-left: 3px;
@@ -536,9 +671,6 @@ nav a {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #e9ecef;
-  border-bottom: 1px solid #e9ecef;
-  background-color: #f1f3f5;
 }
 
 footer {
@@ -550,6 +682,7 @@ footer p {
 }
 footer .svg-icon {
   display: block;
+  opacity: .5;
   font-size: 0;
   list-style: none;
   margin: 0;

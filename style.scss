@@ -261,10 +261,10 @@ img {
   max-width: 100%;
   margin: 0 0 1em;
   border: 1px solid rgba(0, 0, 0, 0.16);
-  &.cover {
-    margin: 15px 0;
-    border: none;
-  }
+}
+.cover {
+  margin: 15px 0;
+  border: none;
 }
 
 // Fixes images in popup boxes from Google Translate

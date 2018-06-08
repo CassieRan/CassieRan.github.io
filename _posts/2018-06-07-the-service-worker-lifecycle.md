@@ -3,8 +3,13 @@ layout: post
 title: PWA初探之Service Worker生命周期（译）
 tags: [PWA, service worker]
 comments: true
+excerpt: Service Worker 的生命周期可以分为6个阶段：解析(parsed)、安装(installing)、安装完成(installed)、激活(activating)、激活完成(activated)、闲置(redundant)
+cover: https://bitsofco.de/content/images/2016/07/Lifecycle-3.png
 ---
 
+
+
+翻译加工来自 Ire Aderinokun 文章 [The Service Worker Lifecycle](https://bitsofco.de/the-service-worker-lifecycle/)，感谢原作者。
 
 Service Worker 的生命周期可以分为6个阶段：解析(parsed)、安装(installing)、安装完成(installed)、激活(activating)、激活完成(activated)、闲置(redundant)
 
@@ -161,7 +166,3 @@ self.addEventListener('message', function(event) {
 - 如果安装失败
 - 如果激活失败
 - 如果有新的 Service Worker 将其替代成为现有的激活 worker
-
-
-
-原文：[The Service Worker Lifecycle](https://bitsofco.de/the-service-worker-lifecycle/)

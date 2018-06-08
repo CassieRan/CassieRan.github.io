@@ -258,9 +258,13 @@ a.footnote {
 // Image
 img {
   display: block;
-  max-width: 60%;
+  max-width: 100%;
   margin: 0 0 1em;
   border: 1px solid rgba(0, 0, 0, 0.16);
+  &.cover {
+    margin: 15px 0;
+    border: none;
+  }
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -468,6 +472,7 @@ nav {
   }
 
   .entry {
+    margin: 15px 0;
     font-size: 16px;
     font-family: "Source Sans Pro", "Montserrat", "Roboto", Helvetica, Arial, sans-serif;
   }

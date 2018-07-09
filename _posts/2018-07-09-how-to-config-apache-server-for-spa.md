@@ -3,6 +3,8 @@ layout: post
 title: apache针对SPA应用的相关配置
 tags: [apache]
 comments: true
+excerpt: 当你将生产代码部署到未正确配置的 apache 服务器上时，打开将发现除了首页，其他子页面全是 404。
+cover: https://www.apache.org/img/asf_logo.png
 ---
 
 

@@ -3,7 +3,7 @@ layout: post
 title: apache针对SPA应用的相关配置
 tags: [apache]
 comments: true
-excerpt: 当你将生产代码部署到未正确配置的 apache 服务器上时，打开将发现除了首页，其他子页面全是 404。
+excerpt: 当您将生产代码部署到未正确配置的 apache 服务器上时，打开将发现除了首页，其他子页面全是 404。
 cover: https://www.apache.org/img/asf_logo.png
 ---
 
@@ -32,7 +32,7 @@ cover: https://www.apache.org/img/asf_logo.png
 
 若使用 Vue + Vue Router 开发，`vue-router` 默认 `hash` 模式，将 `VueRouter` 的实例绑定一个 `mode: 'history'` 属性则可切换到 `history` 模式。
 
-但当你将生产代码部署到未正确配置的 apache 服务器上时，打开将发现除了首页，其他子页面全是 404，这是因为 HTTP 服务器默认情况下访问的是对应目录下的 `index.html`，如需正常访问子页面，需要将路由映射到 `index.html`，意思是如果 URL 匹配不到任何静态资源，则应该返回同一个 `index.html` 页面，这个页面就是你 app 依赖的页面。
+但当您将生产代码部署到未正确配置的 apache 服务器上时，打开将发现除了首页，其他子页面全是 404，这是因为 HTTP 服务器默认情况下访问的是对应目录下的 `index.html`，如需正常访问子页面，需要将路由映射到 `index.html`，意思是如果 URL 匹配不到任何静态资源，则应该返回同一个 `index.html` 页面，这个页面就是您 app 依赖的页面。
 
 
 

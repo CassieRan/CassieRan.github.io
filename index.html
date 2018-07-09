@@ -29,10 +29,14 @@ layout: default
                     {% endfor %}
                 </ul>
             </div>
-
+            {% if post.cover != null %}
+            <img class="cover" src="{{ post.cover }}">
+            {% endif %}
+            {% if post.excerpt != null %}
             <div class="entry">
                 {{ post.excerpt }}
             </div>
+            {% endif %}
 
             <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">查看更多</a>
         </article>

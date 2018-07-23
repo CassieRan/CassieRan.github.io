@@ -585,28 +585,157 @@ export function mergeOptions (
   const options = {}
   let key
   
-	// 遍历parent的key,如果child[key]存在,则option[key] = child[key],反之option[key] = parent[key]
   for (key in parent) {
     mergeField(key)
   }
-    // 遍历child的key,排除所有parent[key]存在的key,option[key] = child[key]
+    
   for (key in child) {
     if (!hasOwn(parent, key)) {
       mergeField(key)
     }
   }
   function mergeField (key) {
-      // strats是Vue.config.optionMergeStrategies为空对象，strat = defaultStrat
     const strat = strats[key] || defaultStrat
-    // strat = function (parentVal: any, childVal: any): any {
-  				// return childVal === undefined
-    			//? parentVal
-    			//: childVal
-			//}
     options[key] = strat(parent[key], child[key], vm, key)
   }
   return options
 }
 ```
 
-未完待续...
+这里需要注意的是不同的选项字段用的合并策略是不同的，
+
+```javascript
+function mergeField (key) {
+    const strat = strats[key] || defaultStrat
+    options[key] = strat(parent[key], child[key], vm, key)
+}
+```
+
+从上面几行代码可以看出取决于 strats[key]，在 options.js 中可以找到 
+
+```
+strats.el = strats.propsData = function (parent, child, vm, key) {
+  if (!vm) {
+    warn(
+      `option "${key}" can only be used during instance ` +
+      'creation with the `new` keyword.'
+    )
+  }
+  return defaultStrat(parent, child)
+}
+```
+
+即 strats.el = strats.propsData = defaultStrat(parent, child)
+
+```javascript
+strats.data = function (
+  parentVal: any,
+  childVal: any,
+  vm?: Component
+): ?Function {
+  if (!vm) {
+    if (childVal && typeof childVal !== 'function') {
+      process.env.NODE_ENV !== 'production' && warn(
+        'The "data" option should be a function ' +
+        'that returns a per-instance value in component ' +
+        'definitions.',
+        vm
+      )
+
+      return parentVal
+    }
+    return mergeDataOrFn(parentVal, childVal)
+  }
+
+  return mergeDataOrFn(parentVal, childVal, vm)
+}
+```
+
+strats.data = mergeDataOrFn(parentVal, childVal, vm)
+
+```javascript
+LIFECYCLE_HOOKS.forEach(hook => {
+  strats[hook] = mergeHook
+})
+```
+
+生命周期选项使用的是 mergeHook 合并函数
+
+```javascript
+ASSET_TYPES.forEach(function (type) {
+  strats[type + 's'] = mergeAssets
+})
+```
+
+components、directives、filters 使用的是 mergeAssets 合并函数
+
+```javascript
+strats.watch = function (
+  parentVal: ?Object,
+  childVal: ?Object,
+  vm?: Component,
+  key: string
+): ?Object {
+  // work around Firefox's Object.prototype.watch...
+  if (parentVal === nativeWatch) parentVal = undefined
+  if (childVal === nativeWatch) childVal = undefined
+  /* istanbul ignore if */
+  if (!childVal) return Object.create(parentVal || null)
+  if (process.env.NODE_ENV !== 'production') {
+    assertObjectType(key, childVal, vm)
+  }
+  if (!parentVal) return childVal
+  const ret = {}
+  extend(ret, parentVal)
+  for (const key in childVal) {
+    let parent = ret[key]
+    const child = childVal[key]
+    if (parent && !Array.isArray(parent)) {
+      parent = [parent]
+    }
+    ret[key] = parent
+      ? parent.concat(child)
+      : Array.isArray(child) ? child : [child]
+  }
+  return ret
+}
+```
+
+```javascript
+strats.props =
+strats.methods =
+strats.inject =
+strats.computed = function (
+  parentVal: ?Object,
+  childVal: ?Object,
+  vm?: Component,
+  key: string
+): ?Object {
+  if (childVal && process.env.NODE_ENV !== 'production') {
+    assertObjectType(key, childVal, vm)
+  }
+  if (!parentVal) return childVal
+  const ret = Object.create(null)
+  extend(ret, parentVal)
+  if (childVal) extend(ret, childVal)
+  return ret
+}
+```
+
+strats.provide = mergeDataOrFn
+
+其他选项字段的合并函数是
+
+```javascript
+const defaultStrat = function (parentVal: any, childVal: any): any {
+  return childVal === undefined
+    ? parentVal
+    : childVal
+}
+```
+
+
+
+### 总结
+
+该篇文章仅记录了 Vue 构造函数设计和实例化的过程，从结构层面上对 Vue 有一个大概的了解，至于具体的方法是如何实现会后续会进行研究。

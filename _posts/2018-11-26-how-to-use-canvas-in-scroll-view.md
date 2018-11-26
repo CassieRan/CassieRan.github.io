@@ -126,25 +126,19 @@ cover:
 
 3. 隐藏 canvas ，显示 image
 
-   说到隐藏，可能你第一时间想到的是 `display: none` `opacity: 0` 之类的方法，可是在小程序中加上这些属性后 canvas 将会变得不可绘制，这里提供两种方法：
+   说到隐藏，可能你第一时间想到的是 `display: none` `opacity: 0` 之类的方法，可是在小程序中加上这些属性后 canvas 将会变得不可绘制，这里采用将其定位到屏幕之外的方法：
 
-   - 定位到屏幕之外
-
-     ```css
-     canvas {
-         position: absolute;
-         left: -999px
-     }
-     ```
-
-   - 使用 cover-image
-
-     ```html
-     <canvas canvas-id="canvas" class="canvas">
-     	<cover-image style="width: 100%; height: 100%" src="{{canvasUrl}}"></cover-image>
-     </canvas>
-     ```
+   ```css
+   canvas {
+       position: absolute;
+       left: -999px;
+   }
+   ```
 
 
+
+最后，来看看效果：
+
+![](/images/canvas_normal.gif)
 
 以上，希望对你有些许帮助。

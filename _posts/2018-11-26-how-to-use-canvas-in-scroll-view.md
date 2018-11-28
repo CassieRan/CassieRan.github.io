@@ -111,12 +111,12 @@ cover:
            width: 150,
            height: 130,
            canvasId: "canvas",
-           success(res) {
-             	const pngData = upng.encode(res.data.buffer,res.width,res.height)
-             	const base64 = wx.arrayBufferToBase64(pngData)
-             	this.setData({
-             		canvasUrl: `data:image/png;base64,${base64}`
-             	})
+           success(res) {   
+               const pngData = upng.encode(res.data.buffer,res.width,res.height)
+               const base64 = wx.arrayBufferToBase64(pngData)
+               this.setData({
+                   canvasUrl: `data:image/png;base64,${base64}`
+               })
            }
        });
    })

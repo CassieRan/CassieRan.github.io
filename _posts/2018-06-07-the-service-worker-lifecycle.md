@@ -24,13 +24,13 @@ Service Worker 的生命周期可以分为6个阶段：解析(parsed)、安装(i
 ```javascript
 /* In main.js */
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('./sw.js')
-	.then(function(registration) {
-		console.log("Service Worker Registered", registration);
-	})
-	.catch(function(err) {
-		console.log("Service Worker Failed to Register", err);
-	})
+    navigator.serviceWorker.register('./sw.js')
+    .then(function(registration) {
+        console.log("Service Worker Registered", registration);
+    })
+    .catch(function(err) {
+        console.log("Service Worker Failed to Register", err);
+    })
 }
 ```
 
@@ -58,11 +58,11 @@ navigator.serviceWorker.register('./sw.js').then(function(registration) {
 ```javascript
 /* In sw.js */
 self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(currentCacheName).then(function(cache) {
-      return cache.addAll(arrayOfFilesToCache);
-    })
-  );
+    event.waitUntil(
+        caches.open(currentCacheName).then(function(cache) {
+            return cache.addAll(arrayOfFilesToCache);
+        })
+    );
 });
 ```
 
@@ -71,9 +71,9 @@ self.addEventListener('install', function(event) {
 ```javascript
 /* In sw.js */
 self.addEventListener('install', function(event) {
-  event.waitUntil(
-   return Promise.reject(); // Failure
-  );
+    event.waitUntil(
+        return Promise.reject(); // Failure
+    );
 });
 ```
 
@@ -110,20 +110,20 @@ navigator.serviceWorker.register('./sw.js').then(function(registration) {
 ```javascript
 /* In sw.js */
 self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    // Get all the cache names
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        // Get all the items that are stored under a different cache name than the current one
-        cacheNames.filter(function(cacheName) {
-          return cacheName != currentCacheName;
-        }).map(function(cacheName) {
-          // Delete the items
-          return caches.delete(cacheName);
-        })
-      ); // end Promise.all()
-    }) // end caches.keys()
-  ); // end event.waitUntil()
+    event.waitUntil(
+        // Get all the cache names
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(
+                // Get all the items that are stored under a different cache name than the current one
+                cacheNames.filter(function(cacheName) {
+                    return cacheName != currentCacheName;
+                }).map(function(cacheName) {
+                    // Delete the items
+                    return caches.delete(cacheName);
+                })
+            ); // end Promise.all()
+        }) // end caches.keys()
+    ); // end event.waitUntil()
 });
 ```
 
@@ -146,14 +146,14 @@ navigator.serviceWorker.register('./sw.js').then(function(registration) {
 
 当 Service Worker 被成功激活后，即可处理绑定的 fetch 和 message 事件
 
-```Javascript
+```javascript
 /* In sw.js */
 self.addEventListener('fetch', function(event) {
-  // Do stuff with fetch events
+    // Do stuff with fetch events
 });
 
 self.addEventListener('message', function(event) {
-  // Do stuff with postMessages received from document
+    // Do stuff with postMessages received from document
 });
 ```
 

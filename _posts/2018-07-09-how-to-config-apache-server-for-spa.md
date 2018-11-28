@@ -64,8 +64,8 @@ vi /etc/apache2/httpd.conf
 
 ```
 <Directory />
-     AllowOverride None
-     Require all denied
+    AllowOverride None
+    Require all denied
 </Directory>
 ```
 
@@ -73,8 +73,8 @@ vi /etc/apache2/httpd.conf
 
 ```
 <Directory />
-	AllowOverride All
-	Require all denied
+    AllowOverride All
+    Require all denied
 </Directory>
 ```
 
@@ -88,12 +88,12 @@ vi /etc/apache2/httpd.conf
 
 ```
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
 </IfModule>
 ```
 
@@ -105,12 +105,12 @@ vi /etc/apache2/httpd.conf
 
 ```
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
 </IfModule>
 ```
 
@@ -196,12 +196,12 @@ vi /etc/apache2/httpd.conf
 
 ```
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
 </IfModule>
 ```
 
@@ -209,12 +209,12 @@ vi /etc/apache2/httpd.conf
 
 ```
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /directoryname/index.html [L]
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /directoryname/index.html [L]
 </IfModule>
 ```
 

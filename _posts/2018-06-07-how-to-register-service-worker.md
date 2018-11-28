@@ -13,47 +13,48 @@ cover: https://bitsofco.de/content/images/2016/07/Lifecycle-3.png
 想要安装 service-worker ，需要先在浏览器中进行注册。
 
 ```javascript
-	// 注册 service worker
-	if ( 'serviceWorker' in navigator ) {
-      navigator.serviceWorker.register( '/service-worker.js' ).then( function ( registration ) {
+// 注册 service worker
+if ( 'serviceWorker' in navigator ) {
+    navigator.serviceWorker.register( '/service-worker.js' ).then( function ( registration ) {
         // 注册成功
         console.log( 'ServiceWorker registration successful with scope: ', registration.scope );
-      } ).catch( function ( err ) {
+    } ).catch( function ( err ) {
         // 注册失败 
         console.log( 'ServiceWorker registration failed: ', err );
-      } );
-    }
+    } );
+}
 ```
 
 现代浏览器 Chrome、Safari、Firefox 、Edge 和 Opera 都已经支持 service-worker。详细的浏览器支持情况可以在 Jake Archibald 的 [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/) 网站上查看。
 
 如果注册成功，我们会接收到 ServiceWorkerRegistration 对象，它包含了ServiceWorker 的状态以及其作用域。打印如下：
 
-ServiceWorkerRegistration: {
-
-​    active:
-        ServiceWorker: { 
-            scriptURL: "http://localhost/service-worker.js", 
-            state: "activated", 
-            onstatechange: ƒ, 
-            onerror: null
-        },
+````javascript
+// ServiceWorkerRegistration
+{
+​    active: { 
+        scriptURL: "http://localhost/service-worker.js", 
+        state: "activated", 
+        onstatechange: ƒ(), 
+        onerror: null
+    },
 
 ​    installing: null,
 
-​    navigationPreload: NavigationPreloadManager: {},
+​    navigationPreload: {},
 
-​    onupdatefound: ƒ (),
+​    onupdatefound: ƒ(),
 
-​    pushManager: PushManager: {},
+​    pushManager: {},
 
 ​    scope: "http://localhost/",
 
-​    sync: SyncManager: {},
+​    sync: {},
 
 ​    waiting: null
 
-}，
+}
+````
 
 这里需要注意的是 ServiceWorker 的作用域与 service-worker.js 的位置有关，若置于项目根目录，则其可作用于整个项目。
 

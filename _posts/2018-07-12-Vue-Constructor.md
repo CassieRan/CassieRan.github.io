@@ -497,8 +497,8 @@ export function resolveConstructorOptions (Ctor: Class<Component>) {
 
 ```javascript
 Vue.options = {
-	components: {
-    	KeepAlive
+    components: {
+        KeepAlive
     },
     directives: {},
     filters: {},
@@ -532,21 +532,18 @@ mergeOptions(
 
 ```javascript
 mergeOptions(
-  {
-	components: {
-      KeepAlive
+    {
+        components: {KeepAlive},
+        directives: {},
+        filters: {},
+        _base: vm
     },
-    directives: {},
-   	filters: {},
-	_base: vm
-
-  },
-  {
-  	el: '#app',
-  	components: { App },
-  	template: '<App/>'
-  },
-  vm
+    {
+        el: '#app',
+        components: { App },
+        template: '<App/>'
+    },
+    vm
 )
 ```
 
@@ -562,15 +559,15 @@ export function mergeOptions (
     checkComponents(child)
   }
 
-    // 如果child也是Vue构造函数
+  // 如果child也是Vue构造函数
   if (typeof child === 'function') {
     child = child.options
   }
-	// 格式化child.props
+  // 格式化child.props
   normalizeProps(child, vm)
-	// 格式化child.inject
+  // 格式化child.inject
   normalizeInject(child, vm)
-    // 格式化child.directives
+  // 格式化child.directives
   normalizeDirectives(child)
     
   const extendsFrom = child.extends
@@ -641,7 +638,6 @@ strats.data = function (
         'definitions.',
         vm
       )
-
       return parentVal
     }
     return mergeDataOrFn(parentVal, childVal)

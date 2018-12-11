@@ -1,6 +1,6 @@
 ---
 layout: post
-title: canvas 无法在 scroll-view 中使用的解决方案
+title: canvas无法在scroll-view中使用的解决方案
 tags: [微信小程序, canvas, scroll-view]
 comments: true
 excerpt: 真机上滚动盒子内的 canvas 是不会随着盒子内容滚动的，看起来像是固定在某个位置，类似于 fixed 定位。

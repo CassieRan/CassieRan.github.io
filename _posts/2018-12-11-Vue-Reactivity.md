@@ -4,7 +4,7 @@ title: Vue源码学习笔记之响应式原理
 tags: [Vue, 响应式, 源码]
 comments: true
 excerpt: 众所周知，Vue的数据响应式的实现结合了Object.defineProperty和发布订阅模式。本文旨在结合源码梳理响应式的过程。
-cover: /images/reactivity.png
+cover: 
 ---
 
 

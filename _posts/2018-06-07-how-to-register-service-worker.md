@@ -3,8 +3,8 @@ layout: post
 title: PWA初探之注册Service Worker
 tags: [PWA, service worker]
 comments: true
-excerpt: 
-cover: https://bitsofco.de/content/images/2016/07/Lifecycle-3.png
+excerpt: 本文是笔者在实践PWA项目时遇到的问题。
+cover: 
 ---
 
 

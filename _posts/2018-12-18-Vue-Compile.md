@@ -4,7 +4,7 @@ title: Vue源码学习笔记之compile
 tags: [Vue, compile, 模版编译, 源码]
 comments: true
 excerpt: 在底层的实现上，Vue 将模板编译成虚拟 DOM 渲染函数。
-cover: /images/compile.png
+cover: 
 ---
 
 

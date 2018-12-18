@@ -812,7 +812,7 @@ parseHTML中涉及几个方法，一一来看看：
 
   - **start**
 
-  - ```javascript
+    ```javascript
     start (tag, attrs, unary) {
       // check namespace.
       // inherit parent ns if there is one
@@ -1306,7 +1306,7 @@ export function callHook (vm: Component, hook: string) {
 
 **3. 总结**
 
-- Vue的模版编译时再挂载的时候执行的
+- Vue的模版编译是在挂载的时候执行的
 - Vue的编译过程分为三个阶段：parse、optimize、generate
 - parse将template由htmlString解析成AST
 - optimize标记AST中的静态节点和静态根节点

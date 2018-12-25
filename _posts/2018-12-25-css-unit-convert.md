@@ -132,7 +132,7 @@ module.exports = {
 const loaderUtils = require('loader-utils');
 const pxRegex = /url\([^\)]+\)|(\d*\.?\d+)px((\;?)(\s*)(\/\*(\s*)([\s\S]*)(\s*)\*\/))?/ig
 
-exports.default function (source) {
+export default function (source) {
     const options = loaderUtils.getOptions(this)
     const opts = Object.assign({}, options)
     const pxReplace = createPxReplace(opts.UIWidth, opts.minPixelValue, opts.unitPrecision, opts.targetUnit, opts.rem)
@@ -188,4 +188,4 @@ Webpack loader可以更全面地转换CSS单位，但是不是细粒度的。您
 }
 ```
 
-最后附上unit-convert-loader的仓库地址，如果您发现漏洞或有更好的实现欢迎提PR，感谢您的阅读！
+最后附上[unit-convert-loader](https://github.com/CassieRan/unit-convert-loader)的仓库地址，如果您发现漏洞或有更好的实现欢迎提PR，感谢您的阅读！

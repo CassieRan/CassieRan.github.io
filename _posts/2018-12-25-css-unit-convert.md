@@ -45,16 +45,20 @@ module.exports = postcss.plugin('postcss-unit-convert', function (options) {
     const pxReplace = createPxReplace(opts.UIWidth, opts.minPixelValue, opts.unitPrecision, opts.targetUnit, opts.rem)
 
     return function (root) {
+        // 如果目标转换单位是rem，则设置html跟节点的字体大小为options.rem
         if (opts.targetUnit === 'rem' && opts.rem) {
-            css.append(`html{ font-size: ${opts.rem}px}`) // 如果目标转换单位是rem，则设置html跟节点的字体大小为options.rem
+            css.append(`html{ font-size: ${opts.rem}px}`) 
         }
-
-        root.walkDecls(function (decl) { // 遍历css属性
-            if (decl.value.indexOf('px') === -1) return // 如果当前属性不包含px，直接跳过
-            if (opts.fontUnit === 'px' && decl.prop === 'font-size') return // 如果options.fontUnit为px则font-size属性直接跳过，这是为了不转换font-size的单位
-            if (blacklistedSelector(opts.selectorBlackList, decl.parent.selector)) return // 如果当前容器包含黑名单的容器名称，则直接跳过
-
-            decl.value = decl.value.replace(pxRegex, pxReplace) // 转换及替换 关键！
+		// 遍历css属性
+        root.walkDecls(function (decl) { 
+            // 如果当前属性不包含px，直接跳过
+            if (decl.value.indexOf('px') === -1) return 
+            // 如果options.fontUnit为px则font-size属性直接跳过，这是为了不转换font-size的单位
+            if (opts.fontUnit === 'px' && decl.prop === 'font-size') return 
+            // 如果当前容器包含黑名单的容器名称，则直接跳过
+            if (blacklistedSelector(opts.selectorBlackList, decl.parent.selector)) return 
+			// 转换及替换 关键！
+            decl.value = decl.value.replace(pxRegex, pxReplace) 
         })
     }
 })
@@ -64,7 +68,6 @@ module.exports = postcss.plugin('postcss-unit-convert', function (options) {
  * 如果px前没有数值，不替换
  * 如果数值小于等于option.minPixelValue，不替换
  */
-
 function createPxReplace (UIWidth, minPixelValue, unitPrecision, targetUnit, rem) {
     return function (m, $1) {
         if (!$1) return m

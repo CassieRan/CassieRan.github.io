@@ -21,13 +21,9 @@ comments: true
 
 
 
-![](https://upload.wikimedia.org/wikipedia/commons/a/ad/Non-Retina_Display.jpg)
+![](https://upload.wikimedia.org/wikipedia/commons/a/ad/Non-Retina_Display.jpg)|![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Retina_Display.jpg/1280px-Retina_Display.jpg)
 
-iPhone 3GS ( 屏幕尺寸：480×320  分辨率：480×320 )
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Retina_Display.jpg/1280px-Retina_Display.jpg)
-
-iPhone 4 ( 屏幕尺寸：480×320  分辨率：960×640 )
+左：iPhone 3GS ( 屏幕尺寸：480×320  分辨率：480×320 )  右：iPhone 4 ( 屏幕尺寸：480×320  分辨率：960×640 )
 
 
 
@@ -154,11 +150,7 @@ visual viewport：手机浏览器可视区域，宽度通过window.innerWidth来
 
 ideal viewport：网站设计与移动设备完美贴合，不需要用户缩放和滚动就能正常查看网站内容，ideal viewport的宽度等于移动设备的屏幕宽度。
 
-![](https://www.quirksmode.org/mobile/pix/viewport/mobile_layoutviewport.jpg)
-
-![](https://www.quirksmode.org/mobile/pix/viewport/mobile_visualviewport.jpg)
-
-![](https://www.quirksmode.org/mobile/pix/viewport/mobile_viewportzoomedout.jpg)
+![](https://www.quirksmode.org/mobile/pix/viewport/mobile_layoutviewport.jpg)|![](https://www.quirksmode.org/mobile/pix/viewport/mobile_visualviewport.jpg)|![](https://www.quirksmode.org/mobile/pix/viewport/mobile_viewportzoomedout.jpg)
 
 
 
@@ -212,17 +204,13 @@ maximum-scale、minimum-scale及user-scalable属性控制允许用户以怎样�
 
 2、市面上的移动设备种类繁多，为了更好的视觉体验，我们希望相同的内容在不同尺寸的移动设备上表现出相同的比例。对比未适配与适配后的差异：
 
-
 未适配：
-![](/images/320*568.png)
-![](/images/375*667.png)
-![](/images/414*736.png)
+
+![](/images/320*568.png)|![](/images/375*667.png)|![](/images/414*736.png)
 
 适配后：
-![](/images/320*568_rem.png)
-![](/images/375*667_rem.png)
-![](/images/414*736_rem.png)
 
+![](/images/320*568_rem.png)|![](/images/375*667_rem.png)|![](/images/414*736_rem.png)
 
 很明显，设计的初衷是三个元素并列一排并横向占据整个屏幕，如果不适配的话，就会因为屏幕宽了多出空白区域或因为屏幕窄了把内容给挤下去。
 

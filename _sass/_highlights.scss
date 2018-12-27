@@ -12,11 +12,11 @@ code.highlighter-rouge {
 
 pre.highlight {
   font-size: $small-font-size;
-  padding: .45em .45em .45em .625em;
-  border: 1px solid $oc-gray-3;
+  padding: 15px;
   border-radius: 3px;
   margin: 1em 0;
-  overflow: scroll;
+  overflow-x: scroll;
+  background-color: #f9ccd93b;
 }
 
 .highlight  { background: $oc-gray-0; }

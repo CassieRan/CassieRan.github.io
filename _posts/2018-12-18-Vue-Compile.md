@@ -18,7 +18,7 @@ cover:
 
 用一张图简要描述\$mount的调用过程：
 
-![$mount](/images/$mount.png)
+![$mount](/images/$mount.png){:style="width:400px"}
 
 源码对\$mount方法进行了两次定义，一次是在'runtime/index.js'(称作：**public mount**)中，另一次是在'entry-runtime-with-compiler.js'(称作：**compile mount**)中，实际上**compile mount**是对**public mount**的扩展，我们来看源码：
 
@@ -99,7 +99,7 @@ function baseCompile (
 
 整个编译过程如下：
 
-![compile](/images/compile.png)
+![compile](/images/compile.png){:style="width:400px"}
 
 **1.0. 编译器**
 

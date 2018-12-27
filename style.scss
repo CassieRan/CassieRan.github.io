@@ -421,12 +421,20 @@ nav {
     .post {
       padding: 25px;
       background-color: #fff;
-      //box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
       transition: all 0.5s ease-in-out;
       border-radius: 2px;
       &:hover {
         box-shadow: 1px 1px 20px rgba(0, 0, 0, .2);
+        background-color: #f9ccd93b;
         //transform: translateY(-2px);
+        >h2 {
+          >a {
+            color: #c2255c;
+          }
+        }
+        .arrow {margin-left: .5rem;
+          opacity: 1;}
       }
       @include mobile {
         width: 100%;
@@ -498,6 +506,17 @@ nav {
 
   .read-more {
     font-size: 15px;
+    .arrow {
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+      color: #fa5252;
+      margin-left: 0;
+      opacity: 0;
+      background-image: url('images/arrow.svg');
+      transition: all .3s ease-in-out;
+    }
   }
 }
 
